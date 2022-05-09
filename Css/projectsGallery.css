@@ -1,0 +1,84 @@
+
+  #Projekty{
+    position: relative;
+    padding-top: 2em;
+    display: grid;
+    grid-template: 45% 45% / repeat(3, 27em);
+    row-gap: 2.5em;
+    column-gap: 2.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.squere{
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 22em;
+    height: 22em;
+    border: 1px solid black;
+    justify-self: center;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.squere .imgBox img{
+    repeat: no-repeat; 
+    width: 100%;
+    height: 100%;
+  }
+
+.overlay{
+    position: relative;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay .squereText{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    left: 0px;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.overlay .squereText h2{
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    transform: translateY(22em);
+}
+
+
+.overlay .squereText p{
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 1em;
+    transform: translateY(22em);
+}
+
+.squereText a{
+    text-decoration: none;
+    color: rgb(199, 199, 195);
+}
+
+.overlay:hover .squereText{ 
+    opacity:0.8;
+    position: absolute;
+}
+
+.overlay:hover .squereText h2{
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+
+.overlay:hover .squereText p{
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}
+

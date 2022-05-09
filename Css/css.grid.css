@@ -1,0 +1,316 @@
+@media only screen and (max-width: 375px){
+    .spacing{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* #deskImage {
+        height: 12em;
+        border: 1px solid red;
+    } */
+
+    #welcome {
+        position: relative;
+        margin-bottom:72px;
+    }
+
+    /* #zdjęciePrzyBiurku {
+        top:46px;
+        width: 10em;
+        height: 14em;
+        left: 0.5em;
+        position: absolute;
+        border: 1px solid black;
+    } */
+
+    /* #hello {
+        display: flex;
+        margin: 1em;
+        transition: all 1s;
+    } */
+}
+
+
+html{
+    background-color: black;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url('../img/pexels-artem-beliaikin-1534172 (1).jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgb(199, 199, 195);
+    word-spacing: 3px;
+    line-height: 1.8;
+}
+
+h1{
+    color: rgba(236, 195, 10, 0.801);
+}
+
+/*CLUE*/
+.clue{
+    display:grid;
+    width:100%;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 27.375em 1fr;
+}
+
+/*BANNER*/
+
+#welcome{
+    margin-top: 6em;
+    height: 27.375em;
+    grid-column: 2 / 2;
+    display: grid;
+    grid-template-columns: 2em 16em 1fr;
+    grid-template-rows: 5.375em 15.625em 5.375em;
+}
+
+#deskImage {
+    height: 22em;
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+#deskImage img{
+    height: 22em;
+    width: 100%;
+}
+
+
+#zdjęciePrzyBiurku { 
+    grid-area: 2 / 2 / 5 / 2;
+}
+
+#zdjęciePrzyBiurku img{
+    height: 22.125em;
+    width: 93.25em;
+    border-radius: 1rem;
+}
+
+#zdjęciePrzyBiurku img{
+    height: 22em;
+    width: 100%;
+    z-index:50;
+}
+
+#hello {
+    grid-area: 3 / 2 / 4 / 4;
+    transition: all 1s;
+    z-index: 1;
+}
+
+
+/*TILES*/
+
+#tiles{
+    grid-column: 2 / 2;
+    display: grid;
+    grid-template-rows: repeat(2,28.125em) 56.25em 28.125em  56.25em 28.125em;
+    row-gap: 2em;
+    margin-top: 10em;
+}
+
+.tile{
+    opacity: 0;
+    background-color: rgba(0,0,0, 0.8);
+    border-radius: 1rem;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.tileContent{
+    opacity: 1;
+}
+
+/*BasicInfo*/
+
+#basicInfo{
+    display: grid; 
+    grid-template-columns: 2.5fr 1fr;
+    height:100%;
+    width: 98.5%;
+}
+
+#basicInfoText{
+    display: grid;
+    padding: 3em;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#basicInfoPhoto img{
+    border-radius: 1rem;
+    width: 16em;
+    height: 23em;
+    margin-top: 2.5em;
+    margin-left: 5em;
+}
+
+/*AboutMe*/
+
+#aboutMe{
+    display: flex;
+    padding: 3em;
+    align-items: center;
+}
+
+#aboutMeText{
+    font-family: 'Mukta', sans-serif;
+}
+
+
+#Konkrety{
+    display: block;
+    overflow: hidden;
+}
+
+/*CERTIFICATES*/
+#certificates{
+    display: grid;
+    row-gap: 5em;
+}
+
+.certificate img  {
+    height: 18.125em;
+    width: 23.3125em;
+    margin: 20px;
+    opacity: 0.9;
+}
+
+.im img:hover{
+    opacity: 1.1;
+    z-index: 50;
+    transform: scale(1.20);
+}
+
+.certificate_A img {
+    height: 18.125em;
+    width: 23.3125em;
+    margin: 20px;
+    opacity: 0.9;
+}
+.certificate_B img {
+    height: 18.125em;
+    width: 23.3125em;
+    margin: 20px;
+    opacity: 0.9;
+}
+ 
+.row-of-three{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 2em;
+    margin-left: 3em;
+    margin-right: 2em;
+    margin-top: 3em;
+}
+
+.row-of-two{
+    display: grid;
+    grid-template-columns: 6em 28.3em 6em 28.3em 6em;
+    column-gap: 3em;
+}
+
+.row-of-two .certificate_A{
+    grid-column: 2 / 2;
+}
+
+.row-of-two .certificate_B{
+    grid-column: 4 / 4;
+}
+
+/* #wiecej{
+    height: 200px;
+    width: 200px;
+    color: black;
+    font-size: 50px;
+} */
+
+
+#Podsumowanie{
+    display: grid;
+    padding: 3em;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+    /* row-gap: 2em; */
+  }
+
+#Podsumowanie h1{
+    justify-self: center;
+}
+
+#Podsumowanie .text{
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6em;
+}
+
+
+/*FOOTER*/
+#stopka {
+    background-color: black;
+    padding: 10px;
+    height: 150px;
+    margin-top:100px;
+}
+
+.kontakt-box {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: auto;
+    right: 50px;
+    top: 10px;
+    color: #ebedee;
+    font-size: 11px;
+    line-height: 120%;
+}
+
+.kontakt-box table {
+    margin: 25px;
+    margin-top: 40px;
+    padding: 10px;
+    float: left;
+}
+
+.kontakt-box th {
+    color: #ebedee;
+}
+
+#map {
+    height: 350px;
+    width: 60%;
+    margin-top: 50px;
+}
+
+.googlemap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.podpis {
+    background-color: black;
+    color: silver;
+    display: flex;
+    justify-content: center;
+}
+
+.podpis{
+    display:flex;
+    justify-content: center;
+}
+
+h1{
+    margin:0;
+}
+.backgruond {
+    background-color: black;
+}

@@ -1,0 +1,79 @@
+/*CAROUSEL*/
+
+#recenzje {
+    position: relative;
+}
+
+.recenzja{
+    position: absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recenzja p{
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    color: rgba(236, 195, 10, 0.801);
+    word-spacing: 3px;
+    line-height: 1.8;
+    font-size:4em;
+}
+
+.carousel_container{
+    position: relative;
+    height:100%;
+    overflow: hidden;
+}
+
+.carousel_Button{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background: transparent; 
+    border: 0;
+    cursor: pointer;
+}
+
+#left{
+    left:-40px;
+}
+
+#right{
+    right:-40px;
+}
+
+.carousel_Button i{
+    width:1em;
+}
+.carousel_slide{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position:relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel_nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel-indicator{
+    border: 0;
+    border-radius: 50%;
+    width: 0.75em;
+    height: 0.75em;
+    background: rgb(0,0,0,.5);
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.carousel-indicator.current-slide{
+    background: rgb(0,0,0,.75);
+}

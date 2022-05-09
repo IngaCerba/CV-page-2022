@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root{
+    --carousel-container-width: 80vw;
+    --carousel-container-height: 20vh;
+    /* --number-of-carousel-slide-elements: 12; */
+    --number-of-displayed-carousel-slide-elements: 3;
+    --carousel-slide-width: calc(var(--carousel-container-width)/var(--number-of-displayed-carousel-slide-elements));
+    --carousel-animation-duration: calc(var(--number-of-carousel-slide-elements)*2s);
+}
+
+.carousel_container{
+    background-color: #111;
+    color: #eee;
+    width: var(--carousel-container-width);
+    height: var(--carousel-container-height);
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel_container:before, .carousel_container:after{
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.carousel_container:before{
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.carousel_container:after{
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+
+.carousel_slide{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--carousel-animation-duration) linear infinite;
+
+}
+
+@keyframes scrolling{
+    0% { transform: translateX(0);}
+    100% { transform: translateX(calc(-1*var(--carousel-slide-width)*var(--number-of-carousel-slide-elements)))};
+}
+
+/* .carousel_slide:hover{
+    animation-play-state: paused;
+} */
+
+.carousel_slide li{
+    border: 3px solid tomato;
+    width: var(--carousel-slide-width);
+    flex-shrink: 0;
+    displaY: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--carousel-container-height)*1/5);
+    /* white-space: nowrap; */
+}
+
+
+@media (max-width: 600px){
+    html { font-size: 12px; }
+    :root {
+        --carousel-container-width: 100vw;
+        --carousel-container-height: 16vh;
+        --number-of-displayed-carousel-slide-elements: 1;
+    }
+    .carousel_container:before, .carousel_container:after { width: 5rem; }
+
+}

@@ -1,0 +1,90 @@
+@media only screen and (max-width: 600px) {
+    #dropdown-content
+    {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 40px;
+    z-index: 1;
+
+    }
+  }
+
+
+ #pasek
+ {
+ display: grid;
+ grid-template-columns: 80% 10% 10%;
+ grid-template-rows: 50px;
+ background-color: black;
+ width: 100%;
+ padding:0;
+ margin:0;
+ z-index: 3;
+ position: fixed;
+ }
+
+ .dropdown
+{
+position: relative;
+grid-column: 2 / 2;
+background-color: transparent;
+font-size: 30px;
+color:#ebedee;
+padding: 2px;
+}
+
+.dropbtn
+{
+display: flex;
+grid-column: 3 / span 3;
+justify-content: center;
+margin-top: 5px;
+background-color: transparent;
+font-size: 30px;
+color:#ebedee;
+}
+
+.fa-2x{
+    font-size:1.2em;
+}
+
+#dropdown-content
+{
+display: none;
+position: absolute;
+background-color: black;
+min-width: 40px;
+z-index: 1;
+top: 50px;
+
+}
+#dropdown-content a
+{
+color: black;
+padding: 10px;
+text-decoration: none;
+display: block;
+}
+#dropdown-content span
+{
+opacity: 50%;
+}
+#dropdown-content span:hover
+{
+opacity: 100%;
+}
+.dropdown:hover #dropdown-content
+{
+display: block;
+}
+
+.telefon
+{
+display: grid;
+grid-column: 3 / 3 ;
+margin-left: 1.5em;
+height: 50px;
+color: #ebedee;
+}
+
